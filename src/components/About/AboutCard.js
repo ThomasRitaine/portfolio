@@ -8,33 +8,32 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
-            <br /> I am a final year student pursuing an Integrated MSc (IMSc)
-            in Maths and Computing at BIT Mesra.
+            Bonjour tout le monde, je suis <span className="purple">Thomas Ritaine </span>
+            né à <span className="purple"> Reims, France.</span>
+            <br /> Je viens d'être diplômé ingénieur en informatique et systèmes d'information de l'UTT, Université de Technologie de Troyes.
             <br />
-            Additionally, I am currently employed as a software developer at
-            Juspay.
+            Actuellement, je suis employé à <b className="purple">#Prox-i</b>, agence de communication digitale à Papeete, Tahiti, en tant que DevOps.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            A part développer et créer des systèmes d'information, voici quelques activités qui m'animent !
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Faire du sport : course à pied, gymnastique et <i>street workout</i>
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Jouer de la guitare
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Voyager, recontrer de nouvelles personnes et découvrir de nouvelles cultures
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Tous les bons ingénieurs logiciel que vous connaissez le sont devenus en résolvant des problèmes qu'ils n'étaient pas qualifiés pour résoudre, jusqu'à ce qu'ils le fassent."{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          {/* Every great developer you know got there by solving problems they were unqualified to solve until they actually did it. */}
+          <footer className="blockquote-footer">Patrick McKenzie</footer>
         </blockquote>
       </Card.Body>
     </Card>
