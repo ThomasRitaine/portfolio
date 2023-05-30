@@ -28,4 +28,4 @@ FROM nginx:alpine AS server
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /usr/src/app/build /usr/share/nginx/html
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
