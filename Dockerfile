@@ -17,10 +17,6 @@ COPY --chown=node:node . .
 
 RUN npm run build
 
-ENV NODE_ENV production
-
-RUN npm ci --only=production && npm cache clean --force
-
 USER node
 
 
@@ -28,9 +24,8 @@ USER node
 # PRODUCTION
 ###################
 
-FROM node:${NODE_VERSION} As production
+FROM nginx:alpine AS server
 
-COPY --chown=node:node --from=build /usr/src/app/node_modules ./node_modules
-COPY --chown=node:node --from=build /usr/src/app/dist ./dist
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD [ "node", "dist/main.js" ]
+COPY --from=builder /usr/src/app/build /usr/share/nginx/html
