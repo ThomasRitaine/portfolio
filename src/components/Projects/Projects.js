@@ -2,12 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import server from "../../Assets/Projects/server.webp";
+import pipeline from "../../Assets/Projects/ci-cd-pipeline.webp";
+import portfolio from "../../Assets/Projects/portfolio.webp";
+import terminal from "../../Assets/Projects/terminal.webp";
+import etuuttApiSymfony from "../../Assets/Projects/etuutt-api-symfony.webp";
 
 function Projects() {
   return (
@@ -15,78 +14,65 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Mes <strong className="purple">travaux </strong> récents
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Voici quelques projets sur lesquels j'ai travaillé récemment.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={server}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Mon serveur personnel"
+              description="Je loue un serveur et j'y héberge mes projets personnels et ceux de mes clients. J'ai configuré le serveur de A à Z, avec Grafana comme outil de monitoring, phpMyAdmin en administration des bases de données, Traefik en reverse-proxy, filtrage IP et HTTP auth pour les pages sensibles, un serveur SFTP, des connexions SSH via PubKey + 2FA TOTP, un firewall + fail2ban, et des backup journalières automatisées, le tout avec Docker."
+              ghLink="https://github.com/ThomasRitaine/server-config"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={pipeline}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Pipeline CI CD"
+              description="Une pipeline CI CD basée sur GitHub Actions, Docker et Bash scripts. Elle permet automatiquement de vérifier le code, mettre à jour les dépendances, déployer en pré-prod lors d'un push sur la branche dev, et en prod lors d'un push sur main, dans les deux cas derrière un reverse-proxy. Ce projet est pour l'instant dans un repo privé."
+              ghLink="https://github.com/ThomasRitaine"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={portfolio}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Mon portfolio"
+              description="Le portfolio que vous consultez actuellement. Il est réalisé avec React, est responsive, utilise des animations, charge super rapidement grâce à l'optimisation des images en webp, et est hébergé sur mon serveur personnel."
+              ghLink="https://github.com/ThomasRitaine/portfolio"
+              demoLink="https://thomas.ritaine.com"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={terminal}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Customisation du terminal Bash"
+              description="J'ai utilisé Starship pour customiser mon terminal Bash, et j'ai créé un script d'installation automatique. Cette interface montre diverses informations comme le nom de l'utilisateur et de la machine locale ou distante, le status Docker de l'app du répertoire courant, les languages utilisés, le temps d'exécution et le code de retour de la dernière commande, etc."
+              ghLink="https://github.com/ThomasRitaine/ThomasRitaine/tree/main/bash_custom"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={etuuttApiSymfony}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="EtuUTT - API"
+              description="Une API qui sert de Back End au site étudiant de l'UTT, école d'ingénieur. Cette applicaton web implémentée en Symfony avec API Platform permet de voir la liste des étudiants, chercher et noter des cours, comparer des emplois du temps, et bien plus encore. J'ai entre autre rédigé intégralement le README et la documentation de l'API."
+              ghLink="https://github.com/ungdev/etuutt-api"
+              demoLink="https://api-etuutt-2020.dev.uttnetgroup.fr/"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
