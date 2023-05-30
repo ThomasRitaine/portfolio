@@ -9,6 +9,18 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
+
+  function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+  }
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -20,7 +32,7 @@ function Home2() {
             <p className="home-about-body">
               J'ai commencé en développant des programmes sur ma calculatrice, puis à 16 ans j'ai mis en ligne mon premier site internet.
               <br />
-              Cette passion ne m'a jamais quittée, et je suis aujourd'hui <b className="purple">diplômé ingénieur informatique</b> de l'<a href="https://www.utt.fr/" target="_blank" rel="noreferrer">UTT</a>.
+              Aujourd'hui j'en ai {getAge('2000-11-20')}, et cette passion ne m'a jamais quittée. En effet, je suis <b className="purple">diplômé ingénieur informatique</b> de l'<a href="https://www.utt.fr/" target="_blank" rel="noreferrer">UTT</a>.
               <br />
               <br />
               Je maîtrise les langages du web tels que <b className="purple">JavaScript</b> et <b className="purple">PHP</b> et me suis spécialisé dans le devéloppement <i>Back End</i> avec des frameworks comme <b className="purple">NestJS</b> et <b className="purple">Symfony</b> en contribuant à des projets Open Source sur <b className="purple">GitHub</b>, ou en entreprise sur des applications innovantes .
