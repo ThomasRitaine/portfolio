@@ -4,6 +4,7 @@ import homeLogo from "../../Assets/home-main.webp";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { Trans, withTranslation } from "react-i18next";
 
 function Home() {
   return (
@@ -14,14 +15,14 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Bonjour !{" "}
+                <Trans>home.hi</Trans>{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
               <h1 className="heading-name">
-                Je suis
+                <Trans>home.iam</Trans>
                 <strong className="main-name"> Thomas Ritaine</strong>
               </h1>
 
@@ -46,4 +47,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default withTranslation()(Home);

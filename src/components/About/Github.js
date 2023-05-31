@@ -1,12 +1,13 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
+import { Trans, withTranslation } from "react-i18next";
 
 function Github() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-        Mes contributions <strong className="purple">Open Source</strong>
+        <Trans>about.github.title</Trans>
       </h1>
       <GitHubCalendar
         username="ThomasRitaine"
@@ -19,4 +20,4 @@ function Github() {
   );
 }
 
-export default Github;
+export default withTranslation()(Github);

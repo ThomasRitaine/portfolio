@@ -6,6 +6,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.webp";
 import Toolstack from "./Toolstack";
+import { Trans, withTranslation } from "react-i18next";
 
 function About() {
   return (
@@ -22,7 +23,7 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Découvrez qui <strong className="purple">je suis</strong>
+              <Trans>about.discover.title</Trans>
             </h1>
             <Aboutcard />
           </Col>
@@ -35,13 +36,13 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading">
-          Mes <strong className="purple">compétences professionnelles </strong>
+          <Trans>about.skills.title</Trans>
         </h1>
 
         <Techstack />
 
         <h1 className="project-heading">
-          Les <strong className="purple">outils</strong> que j'utilise
+          <Trans>about.tools.title</Trans>
         </h1>
         <Toolstack />
 
@@ -51,4 +52,4 @@ function About() {
   );
 }
 
-export default About;
+export default withTranslation()(About);

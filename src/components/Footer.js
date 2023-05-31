@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Trans, withTranslation } from "react-i18next";
 import {
   AiFillGithub,
   AiOutlineMail,
@@ -9,11 +10,12 @@ import { FaLinkedinIn } from "react-icons/fa";
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
+
   return (
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Edité et hébergé par Thomas Ritaine</h3>
+          <h3><Trans>footer</Trans></h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} TR</h3>
@@ -55,4 +57,5 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default withTranslation()(Footer);
+

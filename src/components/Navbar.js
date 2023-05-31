@@ -6,19 +6,21 @@ import logo from "../Assets/logo.webp";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
-
+import { AiFillStar, AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
+import { IoLanguageSharp } from "react-icons/io5";
 import { CgFileDocument } from "react-icons/cg";
+import { useTranslation } from 'react-i18next';
+import { NavDropdown } from "react-bootstrap";
 
 function NavBar() {
+  // State variables for Navbar
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
+  // Internationalization function
+  const { t, i18n } = useTranslation();
+
+  // Function to handle scrolling
   function scrollHandler() {
     if (window.scrollY >= 20) {
       updateNavbar(true);
@@ -27,6 +29,12 @@ function NavBar() {
     }
   }
 
+  // Function to change the language
+  function changeLanguage(e) {
+    i18n.changeLanguage(e);
+  }
+
+  // Event listener for scrolling
   window.addEventListener("scroll", scrollHandler);
 
   return (
@@ -61,35 +69,44 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/a-propos"
+                to={t('nav.about.path')}
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> A propos
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t('nav.about')}
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/projets"
+                to={t('nav.projects.path')}
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projets
+                {t('nav.projects')}
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/cv"
+                to={t('nav.resume.path')}
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> CV
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t('nav.resume')}
               </Nav.Link>
             </Nav.Item>
+
+            <NavDropdown
+              title={<><IoLanguageSharp style={{ marginBottom: "2px" }} /> Language</>}
+              id="language-dropdown"
+              onSelect={changeLanguage}
+            >
+              <NavDropdown.Item eventKey="en">English</NavDropdown.Item>
+              <NavDropdown.Item eventKey="fr">Français</NavDropdown.Item>
+            </NavDropdown>
 
             <Nav.Item className="fork-btn">
               <Button

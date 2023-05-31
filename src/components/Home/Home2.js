@@ -7,6 +7,7 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Trans, withTranslation } from "react-i18next";
 
 function Home2() {
 
@@ -27,28 +28,32 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              Laissez-moi <span className="purple"> me présenter </span>
+              <Trans>home2.introduce.title</Trans>
             </h1>
             <p className="home-about-body">
-              J'ai commencé en développant des programmes sur ma calculatrice, puis à 16 ans j'ai mis en ligne mon premier site internet.
-              <br />
-              Aujourd'hui j'en ai {getAge('2000-11-20')}, et cette passion ne m'a jamais quittée. En effet, je suis <b className="purple">diplômé ingénieur informatique</b> de l'<a href="https://www.utt.fr/" target="_blank" rel="noreferrer">UTT</a>.
+              <Trans>home2.introduce.body.part1</Trans>{getAge('2000-11-20')}<Trans>home2.introduce.body.part2</Trans><a href="https://www.utt.fr/" target="_blank" rel="noreferrer">UTT</a>.
               <br />
               <br />
-              Je maîtrise les langages du web tels que <b className="purple">JavaScript</b> et <b className="purple">PHP</b> et me suis spécialisé dans le devéloppement <i>Back End</i> avec des frameworks comme <b className="purple">NestJS</b> et <b className="purple">Symfony</b> en contribuant à des projets Open Source sur <b className="purple">GitHub</b>, ou en entreprise sur des applications innovantes .
+              <Trans>home2.introduce.body.part3</Trans>
               <br />
               <br />
-              De plus, puisque "<i>un bon développeur est un développeur fainéant</i>", j'ai automatisé tous mes processus de déploiement d'applications web grâce à <b className="purple">Docker</b>, <b className="purple">GitHub Actions</b> et <b className="purple">Bash</b>.
-              <br />
-              Il en résulte :
+              <Trans>home2.introduce.body.part4</Trans>
               <ul>
-                <li>Une augmentation drastique de la sécurité</li>
-                <li>Une simplification des procédures</li>
-                <li>Une réduction de l'erreur humaine</li>
-                <li>Une réduction des coûts</li>
+                <li className="emoji-li">
+                  🔒 <Trans>home2.introduce.body.ul.1</Trans>
+                </li>
+                <li className="emoji-li">
+                  🙌 <Trans>home2.introduce.body.ul.2</Trans>
+                </li>
+                <li className="emoji-li">
+                  🤷‍♂️ <Trans>home2.introduce.body.ul.3</Trans>
+                </li>
+                <li className="emoji-li">
+                  💵 <Trans>home2.introduce.body.ul.4</Trans>
+                </li>
               </ul>
               <br />
-              Dernièrement, je m'intéresse de près à la <b className="purple">Cybersécurité</b>, en particulier pour mes serveurs web, et à l'automatisation de tâches quotidienne en <b className="purple">Python</b>.
+              <Trans>home2.introduce.body.part5</Trans>
               <br />
             </p>
           </Col>
@@ -60,9 +65,9 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>Trouvez-moi sur les réseaux</h1>
+            <h1><Trans>home2.media.title</Trans></h1>
             <p>
-              N'hésitez pas à me <span className="purple">contacter </span>
+              <Trans>home2.media.body</Trans>
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
@@ -102,4 +107,5 @@ function Home2() {
     </Container>
   );
 }
-export default Home2;
+
+export default withTranslation()(Home2);
