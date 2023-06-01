@@ -3,9 +3,7 @@ version: '3.8'
 services:
 
   portfolio:
-    build:
-      context: .
-      target: server
+    image: ghcr.io/thomasritaine/portfolio:main
     restart: unless-stopped
     networks:
       - proxy
