@@ -2,22 +2,18 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Trans, withTranslation } from "react-i18next";
 
 function Home2() {
-
   function getAge(dateString) {
     var today = new Date();
     var birthDate = new Date(dateString);
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
+      age--;
     }
     return age;
   }
@@ -31,7 +27,13 @@ function Home2() {
               <Trans>home2.introduce.title</Trans>
             </h1>
             <p className="home-about-body">
-              <Trans>home2.introduce.body.part1</Trans>{getAge('2000-11-20')}<Trans>home2.introduce.body.part2</Trans><a href="https://www.utt.fr/" target="_blank" rel="noreferrer">UTT</a>.
+              <Trans>home2.introduce.body.part1</Trans>
+              {getAge("2000-11-20")}
+              <Trans>home2.introduce.body.part2</Trans>
+              <a href="https://www.utt.fr/" target="_blank" rel="noreferrer">
+                UTT
+              </a>
+              .
               <br />
               <br />
               <Trans>home2.introduce.body.part3</Trans>
@@ -65,7 +67,9 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1><Trans>home2.media.title</Trans></h1>
+            <h1>
+              <Trans>home2.media.title</Trans>
+            </h1>
             <p>
               <Trans>home2.media.body</Trans>
             </p>
@@ -92,7 +96,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="mailto:thomas.ritaine@outlook.com"
+                  href="mailto:thomas@ritaine.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
