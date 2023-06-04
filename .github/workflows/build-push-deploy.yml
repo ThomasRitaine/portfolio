@@ -1,11 +1,11 @@
-name: Build and push image
+name: "CD : Build, push then deploy image"
 
 on:
   push:
     branches: ["main"]
 
 jobs:
-  build-and-push-image:
+  build-push-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -39,3 +39,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: SSH into VPS and deploy app
+        uses: appleboy/ssh-action@latest
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER_NAME }}
+          key: ${{ secrets.VPS_USER_KEY }}
+          script_stop: true
+          script: |
+            cd ~/applications/portfolio
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml down
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
