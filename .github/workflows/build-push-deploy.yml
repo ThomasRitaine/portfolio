@@ -41,7 +41,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: SSH into VPS and deploy app
-        uses: appleboy/ssh-action@latest
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER_NAME }}
