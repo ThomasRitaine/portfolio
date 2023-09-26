@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Trans, withTranslation } from "react-i18next";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { TbBrandFiverr } from "react-icons/tb";
 
 function Footer() {
   let date = new Date();
@@ -44,6 +45,16 @@ function Footer() {
             <li className="social-icons">
               <a href="mailto:thomas@ritaine.com" style={{ color: "white" }}>
                 <AiOutlineMail />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.fiverr.com/ThomasRitaine"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TbBrandFiverr />
               </a>
             </li>
           </ul>

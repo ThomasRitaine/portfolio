@@ -9,10 +9,10 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          t('home.type.engineer'),
-          t('home.type.freelance'),
-          t('home.type.devops'),
-          t('home.type.opensource'),
+          t("home.type.engineer"),
+          t("home.type.freelance"),
+          t("home.type.devops"),
+          t("home.type.ai-artist"),
         ],
         autoStart: true,
         loop: true,

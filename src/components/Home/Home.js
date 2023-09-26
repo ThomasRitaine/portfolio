@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import { Trans, withTranslation } from "react-i18next";
+import { TbBrandFiverr } from "react-icons/tb";
 
 function Home() {
   return (
@@ -29,6 +30,18 @@ function Home() {
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
+
+              <a
+                href="https://www.fiverr.com/ThomasRitaine"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fiverr-button"
+                onMouseOver={(e) => (e.currentTarget.style.opacity = "0.8")}
+                onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+              >
+                <TbBrandFiverr style={{ marginRight: "10px" }} />
+                <Trans>home.fiverr</Trans>
+              </a>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
