@@ -3,11 +3,24 @@ services:
     image: ghcr.io/thomasritaine/portfolio:main
     restart: unless-stopped
     networks:
+      - default
       - traefik
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.${APP_NAME}.rule=Host(`${APP_DOMAIN_NAME}`)"
 
+  tor:
+    image: osminogin/tor-simple
+    restart: unless-stopped
+    depends_on:
+      - portfolio
+    volumes:
+      - ./tor/torrc:/etc/tor/torrc:ro
+      - ./tor/hidden_service:/var/lib/tor/hidden_service
+    networks:
+      - default
+
 networks:
+  default:
   traefik:
     external: true
