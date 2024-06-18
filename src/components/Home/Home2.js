@@ -5,7 +5,6 @@ import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Trans, withTranslation } from "react-i18next";
-import { TbBrandFiverr } from "react-icons/tb";
 
 function Home2() {
   function getAge(dateString) {
@@ -103,16 +102,6 @@ function Home2() {
                   className="icon-colour home-social-icons"
                 >
                   <AiOutlineMail />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.fiverr.com/ThomasRitaine"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <TbBrandFiverr />
                 </a>
               </li>
             </ul>

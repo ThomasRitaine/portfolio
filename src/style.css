@@ -747,20 +747,3 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
-
-/* Fiverr Button Home Page */
-.fiverr-button {
-  display: inline-flex;
-  align-items: center;
-  background-color: #50caa3;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.fiverr-button:hover {
-  color: #ffffff;
-}

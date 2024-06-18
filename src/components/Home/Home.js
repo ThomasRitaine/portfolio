@@ -5,7 +5,6 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import { Trans, withTranslation } from "react-i18next";
-import { TbBrandFiverr } from "react-icons/tb";
 
 function Home() {
   return (
