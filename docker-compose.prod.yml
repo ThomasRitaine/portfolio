@@ -3,11 +3,11 @@ services:
     image: ghcr.io/thomasritaine/portfolio:main
     restart: unless-stopped
     networks:
-      - proxy
+      - traefik
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.${APP_NAME}.rule=Host(`${APP_DOMAIN_NAME}`)"
 
 networks:
-  proxy:
+  traefik:
     external: true
