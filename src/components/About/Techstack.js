@@ -1,18 +1,18 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import {
-  DiJavascript1,
-  DiNpm,
-  DiPython,
-} from "react-icons/di";
+import { DiJavascript1, DiPython } from "react-icons/di";
 import {
   SiGithubactions,
   SiGit,
   SiGnubash,
-  SiPuppeteer,
-  SiPhp,
-  SiSymfony,
   SiTypescript,
+  SiKubernetes,
+  SiTorproject,
+  SiSupabase,
+  SiPrisma,
+  SiAmazons3,
+  SiPostgresql,
+  SiTraefikproxy,
 } from "react-icons/si";
 import { FaDocker, FaNode } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
@@ -21,13 +21,7 @@ function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <FaDocker />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGithubactions />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGnubash />
+        <SiGit />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
@@ -39,25 +33,37 @@ function Techstack() {
         <FaNode />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNpm />
+        <DiPython />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPuppeteer />
+        <FaDocker />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiGit />
+        <SiKubernetes />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiTraefikproxy />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazons3 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGithubactions />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiSupabase />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <TbSql />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPhp />
+        <SiPostgresql />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSymfony />
+        <SiPrisma />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
+        <SiTorproject />
       </Col>
     </Row>
   );

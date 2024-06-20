@@ -7,6 +7,7 @@ import {
   SiWindows,
   SiWindowsterminal,
   SiBitwarden,
+  SiNeovim,
 } from "react-icons/si";
 import { TbBrandGithubCopilot } from "react-icons/tb";
 
@@ -21,6 +22,9 @@ function Toolstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiNeovim />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <TbBrandGithubCopilot />
