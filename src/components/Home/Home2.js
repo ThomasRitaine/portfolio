@@ -28,37 +28,62 @@ function Home2() {
             </h1>
             <p className="home-about-body">
               <Trans>home2.introduce.body.part1</Trans>
-              {getAge("2000-11-20")}
+              {getAge("2000-11-20") + 1}
               <Trans>home2.introduce.body.part2</Trans>
-              <a href="https://www.utt.fr/" target="_blank" rel="noreferrer">
-                UTT
-              </a>
-              .
               <br />
               <br />
-              <Trans>home2.introduce.body.part3</Trans>
               <br />
-              <br />
-              <Trans>home2.introduce.body.part4</Trans>
+              <h3>
+                🌐 <Trans>home2.introduce.body.section1.title</Trans>
+              </h3>
               <ul>
-                <li className="emoji-li">
-                  🔒 <Trans>home2.introduce.body.ul.1</Trans>
+                <li>
+                  <Trans>home2.introduce.body.section1.body.li1</Trans>
                 </li>
-                <li className="emoji-li">
-                  🙌 <Trans>home2.introduce.body.ul.2</Trans>
+                <li>
+                  <Trans>home2.introduce.body.section1.body.li2</Trans>
                 </li>
-                <li className="emoji-li">
-                  🤷‍♂️ <Trans>home2.introduce.body.ul.3</Trans>
-                </li>
-                <li className="emoji-li">
-                  💵 <Trans>home2.introduce.body.ul.4</Trans>
+                <li>
+                  <Trans>home2.introduce.body.section1.body.li3</Trans>
                 </li>
               </ul>
               <br />
-              <Trans>home2.introduce.body.part5</Trans>
+              <h3>
+                🤖 <Trans>home2.introduce.body.section2.title</Trans>
+              </h3>
+              <p>
+                <Trans>home2.introduce.body.section2.body</Trans>
+              </p>
+              <br />
+              <h3>
+                🛠️ <Trans>home2.introduce.body.section3.title</Trans>
+              </h3>
+              <p>
+                <Trans>home2.introduce.body.section3.body</Trans>
+                <br />
+                <a href="http://thomrit4ylnmuwuby3mexep44adyx6algeurmf5lgl57pywprcgm6dqd.onion" target="_blank">http://thomrit4ylnmuwuby3mexep44adyx6algeurmf5lgl57pywprcgm6dqd.onion</a>
+              </p>
+              <br />
+              <h3>
+                📱 <Trans>home2.introduce.body.section4.title</Trans>
+              </h3>
+              <p>
+                <Trans>home2.introduce.body.section4.body</Trans>
+              </p>
+              <br />
+              <h3>
+                📚 <Trans>home2.introduce.body.section5.title</Trans>
+              </h3>
+              <p>
+                <Trans>home2.introduce.body.section5.body</Trans>
+              </p>
+              <br />
+              <br />
+              <Trans>home2.introduce.body.footer</Trans>
               <br />
             </p>
           </Col>
+
           <Col md={4} className="myAvtar">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
