@@ -9,6 +9,8 @@ import terminal from "../../Assets/Projects/terminal.webp";
 import etuuttApiSymfony from "../../Assets/Projects/etuutt-api-symfony.webp";
 import cdn from "../../Assets/Projects/cdn.webp";
 import chatdoc from "../../Assets/Projects/chatdoc.webp";
+import labsaiarttv from "../../Assets/Projects/labsaiarttv.webp";
+import aiarttv from "../../Assets/Projects/aiarttv.webp";
 import { Trans, withTranslation } from "react-i18next";
 
 function Projects() {
@@ -31,6 +33,27 @@ function Projects() {
               description={<Trans>projects.chatdoc.body</Trans>}
               ghLink="https://github.com/ThomasRitaine/chatdoc"
               demoLink="https://chatdoc.thomas.ritaine.com"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={labsaiarttv}
+              isBlog={false}
+              title={<Trans>projects.labs-ai-art-tv.title</Trans>}
+              description={<Trans>projects.labs-ai-art-tv.body</Trans>}
+              ghLink="https://github.com/ThomasRitaine/auto-midjourney"
+              demoLink="https://labs.ai-art.tv"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={aiarttv}
+              isBlog={false}
+              title={<Trans>projects.ai-art-tv.title</Trans>}
+              description={<Trans>projects.ai-art-tv.body</Trans>}
+              demoLink="https://ai-art.tv"
             />
           </Col>
 
