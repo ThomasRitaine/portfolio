@@ -59,5 +59,7 @@
   "projects.labs-ai-art-tv.body": "Developed with Node.js, Express.js, and Prisma, Labs AI Art TV is a web application that automates the creation of AI-generated images using Midjourney. It impersonates me on Discord to interact with Midjourney, generating hundreds of images at once with GPT-4 generated prompts. Friends can favorite images, and liked ones automatically become NFTs listed on OpenSea, and published on Instagram and Twitter. Source code is available on my GitHub.",
   "projects.ai-art-tv.title": "AI Art TV: Digital Art Showcase",
   "projects.ai-art-tv.body": "AI Art TV is a professionally designed website I built with WordPress. It showcases my best AI-generated artworks, similar to a professional photographer's portfolio. Developed to promote my AI art and attract customers, the site features a stunning design and a custom logo crafted specifically for the project. Visit ai-art.tv to view my hand-selected pieces and explore the art of AI creativity.",
+  "projects.qrcode.title": "AI Art TV: Dynamic AI QR Codes",
+  "projects.qrcode.body": "I created visually stunning AI-generated QR codes that maintain readability by phones. These QR codes not only attract human attention with their exceptional design but also provide analytics on scans, including frequency, user, and location details. I control the redirection URLs dynamically, allowing targeted engagements to any Website of my clients.",
   "resume.download": "Download my resume"
 }

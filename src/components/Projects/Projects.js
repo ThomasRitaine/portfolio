@@ -11,6 +11,7 @@ import cdn from "../../Assets/Projects/cdn.webp";
 import chatdoc from "../../Assets/Projects/chatdoc.webp";
 import labsaiarttv from "../../Assets/Projects/labsaiarttv.webp";
 import aiarttv from "../../Assets/Projects/aiarttv.webp";
+import qrcode from "../../Assets/Projects/qrcode.webp";
 import { Trans, withTranslation } from "react-i18next";
 
 function Projects() {
@@ -76,6 +77,16 @@ function Projects() {
               description={<Trans>projects.portfolio.body</Trans>}
               ghLink="https://github.com/ThomasRitaine/portfolio"
               demoLink="https://thomas.ritaine.com"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={qrcode}
+              isBlog={false}
+              title={<Trans>projects.qrcode.title</Trans>}
+              description={<Trans>projects.qrcode.body</Trans>}
+              demoLink="https://qrcode.ai-art.tv"
             />
           </Col>
 
