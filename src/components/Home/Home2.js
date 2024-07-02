@@ -61,7 +61,12 @@ function Home2() {
               <p>
                 <Trans>home2.introduce.body.section3.body</Trans>
                 <br />
-                <a href="http://thomrit4ylnmuwuby3mexep44adyx6algeurmf5lgl57pywprcgm6dqd.onion" target="_blank">http://thomrit4ylnmuwuby3mexep44adyx6algeurmf5lgl57pywprcgm6dqd.onion</a>
+                <a
+                  href="http://thomrit4ylnmuwuby3mexep44adyx6algeurmf5lgl57pywprcgm6dqd.onion"
+                  target="_blank"
+                >
+                  http://thomrit4... .onion
+                </a>
               </p>
               <br />
               <h3>
@@ -86,7 +91,11 @@ function Home2() {
 
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="Professional Headshot" />
+              <img
+                src={myImg}
+                className="img-fluid"
+                alt="Professional Headshot"
+              />
             </Tilt>
           </Col>
         </Row>
