@@ -43,7 +43,7 @@ jobs:
           file: ./Dockerfile
           target: server
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64/v8
           tags: |
             ghcr.io/thomasritaine/portfolio:main
             ghcr.io/thomasritaine/portfolio:latest
