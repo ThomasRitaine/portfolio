@@ -5,7 +5,7 @@ ARG NODE_VERSION=20-alpine
 # BUILD FOR PRODUCTION
 ###################
 
-FROM node:${NODE_VERSION} As build
+FROM --platform=$BUILDPLATFORM node:${NODE_VERSION} AS build
 
 WORKDIR /usr/src/app
 
@@ -24,7 +24,7 @@ USER node
 # PRODUCTION
 ###################
 
-FROM nginx:alpine AS server
+FROM --platform=$TARGETPLATFORM nginx:alpine AS server
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
