@@ -7,9 +7,6 @@ on:
 jobs:
   build-push-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        platform: [linux/amd64, linux/arm64]
     permissions:
       contents: read
       packages: write
@@ -20,6 +17,9 @@ jobs:
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.ref_name }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -37,26 +37,15 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository }}
 
-      - name: Build and push Docker image for ${{ matrix.platform }}
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
           target: server
           push: true
-          platforms: ${{ matrix.platform }}
-          tags: ghcr.io/${{ github.repository }}:${{ matrix.platform }}
+          platforms: linux/amd64,linux/arm64/v8
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Create multi-arch manifest
-        uses: docker/manifest-action@v2
-        with:
-          images: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ steps.meta.outputs.sha }}
-
-          manifests: |
-            ghcr.io/${{ github.repository }}:linux/amd64
-            ghcr.io/${{ github.repository }}:linux/arm64
 
       - name: SSH into VPS and deploy app
         uses: appleboy/ssh-action@v1.1.0
