@@ -64,6 +64,7 @@ function Home2() {
                 <a
                   href="http://thomrit4ylnmuwuby3mexep44adyx6algeurmf5lgl57pywprcgm6dqd.onion"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   http://thomrit4... .onion
                 </a>

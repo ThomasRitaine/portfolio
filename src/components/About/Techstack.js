@@ -4,7 +4,6 @@ import { DiJavascript1, DiPython } from "react-icons/di";
 import {
   SiGithubactions,
   SiGit,
-  SiGnubash,
   SiTypescript,
   SiKubernetes,
   SiTorproject,
