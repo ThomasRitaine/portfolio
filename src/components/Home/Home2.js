@@ -32,6 +32,11 @@ function Home2() {
               <Trans>home2.introduce.body.part2</Trans>
               <br />
               <br />
+              <Trans>home2.introduce.body.early_programming</Trans>
+              <a href="https://cryptea.thomas.ritaine.com/" target="_blank" rel="noreferrer">
+                <Trans>home2.introduce.body.cryptea_link</Trans>
+              </a>
+              <br />
               <br />
               <h3>
                 🌐 <Trans>home2.introduce.body.section1.title</Trans>
