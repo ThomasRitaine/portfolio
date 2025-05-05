@@ -96,6 +96,7 @@ function Home2() {
                 src={myImg}
                 className="img-fluid"
                 alt="Professional Headshot"
+                style={{ borderRadius: "50%" }}
               />
             </Tilt>
           </Col>
