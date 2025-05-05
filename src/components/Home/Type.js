@@ -10,7 +10,6 @@ function Type() {
       options={{
         strings: [
           t('home.type.engineer'),
-          t('home.type.freelance'),
           t('home.type.devops'),
           t('home.type.opensource'),
         ],
