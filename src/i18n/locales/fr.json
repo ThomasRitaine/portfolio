@@ -40,6 +40,8 @@
   "about.discover.quote": "Tous les bons ingénieurs logiciel que vous connaissez le sont devenus en résolvant des problèmes qu'ils n'étaient pas qualifiés pour résoudre, jusqu'à ce qu'ils le fassent.",
   "about.skills.title": "<b>Compétences</b> professionnelles",
   "about.tools.title": "Les <b>outils</b> que j'utilise",
+  "projects.title": "Mes <b>travaux</b> récents",
+  "projects.body": "Voici quelques projets sur lesquels j'ai travaillé récemment.",
   "about.github.title": "Mes contributions <b>Open Source</b>",
   "projects.vps.title": "Mon serveur personnel",
   "projects.vps.body": "Je gère un serveur personnel robuste hébergeant des projets clients et personnels, entièrement configuré avec Docker. Les fonctionnalités incluent Grafana pour la surveillance en temps réel, DBeaver pour la gestion des bases de données, et Traefik pour des services de reverse-proxy sécurisés. La sécurité est renforcée par un filtrage IP, SSO avec Authentik, SSH avec clé publique et TOTP à 2 facteurs, ainsi qu'un pare-feu robuste et une configuration fail2ban. Les données des applications sont sauvegardées quotidiennement vers un bucket S3 chiffré.",
