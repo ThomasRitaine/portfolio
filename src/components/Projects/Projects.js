@@ -9,6 +9,7 @@ import terminal from "../../Assets/Projects/terminal.webp";
 import etuuttApiSymfony from "../../Assets/Projects/etuutt-api-symfony.webp";
 import cdn from "../../Assets/Projects/cdn.webp";
 import chatdoc from "../../Assets/Projects/chatdoc.webp";
+import nixos from "../../Assets/Projects/nixos.webp";
 import labsaiarttv from "../../Assets/Projects/labsaiarttv.webp";
 import aiarttv from "../../Assets/Projects/aiarttv.webp";
 import qrcode from "../../Assets/Projects/qrcode.webp";
@@ -28,12 +29,23 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={nixos}
+              isBlog={false}
+              title={<Trans>projects.nixos.title</Trans>}
+              description={<Trans>projects.nixos.body</Trans>}
+              ghLink="https://github.com/ThomasRitaine/nixos-config"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={chatdoc}
               isBlog={false}
               title={<Trans>projects.chatdoc.title</Trans>}
               description={<Trans>projects.chatdoc.body</Trans>}
               ghLink="https://github.com/ThomasRitaine/chatdoc"
-              demoLink="https://chatdoc.thomas.ritaine.com"
+              demoLink="https://youtu.be/fZRO6ww6rFQ"
             />
           </Col>
 
@@ -50,11 +62,11 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={aiarttv}
+              imgPath={qrcode}
               isBlog={false}
-              title={<Trans>projects.ai-art-tv.title</Trans>}
-              description={<Trans>projects.ai-art-tv.body</Trans>}
-              demoLink="https://ai-art.tv"
+              title={<Trans>projects.qrcode.title</Trans>}
+              description={<Trans>projects.qrcode.body</Trans>}
+              demoLink="https://qrcode.ai-art.tv"
             />
           </Col>
 
@@ -82,11 +94,11 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={qrcode}
+              imgPath={aiarttv}
               isBlog={false}
-              title={<Trans>projects.qrcode.title</Trans>}
-              description={<Trans>projects.qrcode.body</Trans>}
-              demoLink="https://qrcode.ai-art.tv"
+              title={<Trans>projects.ai-art-tv.title</Trans>}
+              description={<Trans>projects.ai-art-tv.body</Trans>}
+              demoLink="https://ai-art.tv"
             />
           </Col>
 

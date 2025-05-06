@@ -43,6 +43,8 @@
   "about.github.title": "My <b>Open Source</b> contributions",
   "projects.title": "My recent <b>Works</b>",
   "projects.body": "Here are a few projects I've worked on recently.",
+  "projects.nixos.title": "Nix and NixOS Config",
+  "projects.nixos.body": "I developed a comprehensive open-source Nix configuration featuring modular flakes with complete documentation on GitHub. This system powers three production NixOS servers with essential administration tools, while also providing my daily development environment on Ubuntu with declarative configurations for Neovim, kubectl, Zsh, and more. I've also repurposed an old laptop into a homelab server that routes traffic securely via Cloudflare Tunnel.",
   "projects.vps.title": "My personal server",
   "projects.vps.body": "I manage a robust personal server hosting client and personal projects, fully configured using Docker. Features include Grafana for real-time monitoring, DBeaver for database management, and Traefik for secure reverse-proxy services. Security is reinforced through IP filtering, SSO with Authentik, SSH with PublicKey and 2FA TOTP, plus a robust firewall and fail2ban setup. Application's data are backed up daily to an encrypted S3 bubket.",
   "projects.ci-cd.title": "CI CD pipeline",

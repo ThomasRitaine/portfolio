@@ -42,6 +42,8 @@
   "about.tools.title": "Les <b>outils</b> que j'utilise",
   "projects.title": "Mes <b>travaux</b> récents",
   "projects.body": "Voici quelques projets sur lesquels j'ai travaillé récemment.",
+  "projects.nixos.title": "Configuration Nix et NixOS",
+  "projects.nixos.body": "J'ai développé une configuration Nix open-source complète avec des flakes modulaires et une documentation exhaustive sur GitHub. Ce système alimente trois serveurs NixOS en production avec des outils d'administration essentiels, tout en fournissant mon environnement de développement quotidien sur Ubuntu avec des configurations déclaratives pour Neovim, kubectl, Zsh et plus encore. J'ai également reconverti un ancien ordinateur portable en serveur homelab qui achemine le trafic en toute sécurité via Cloudflare Tunnel.",
   "about.github.title": "Mes contributions <b>Open Source</b>",
   "projects.vps.title": "Mon serveur personnel",
   "projects.vps.body": "Je gère un serveur personnel robuste hébergeant des projets clients et personnels, entièrement configuré avec Docker. Les fonctionnalités incluent Grafana pour la surveillance en temps réel, DBeaver pour la gestion des bases de données, et Traefik pour des services de reverse-proxy sécurisés. La sécurité est renforcée par un filtrage IP, SSO avec Authentik, SSH avec clé publique et TOTP à 2 facteurs, ainsi qu'un pare-feu robuste et une configuration fail2ban. Les données des applications sont sauvegardées quotidiennement vers un bucket S3 chiffré.",
