@@ -8,7 +8,6 @@ import portfolio from "../../Assets/Projects/portfolio.webp";
 import terminal from "../../Assets/Projects/terminal.webp";
 import etuuttApiSymfony from "../../Assets/Projects/etuutt-api-symfony.webp";
 import cdn from "../../Assets/Projects/cdn.webp";
-import chatdoc from "../../Assets/Projects/chatdoc.webp";
 import nixos from "../../Assets/Projects/nixos.webp";
 import labsaiarttv from "../../Assets/Projects/labsaiarttv.webp";
 import aiarttv from "../../Assets/Projects/aiarttv.webp";
@@ -40,7 +39,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatdoc}
+              videoId="fZRO6ww6rFQ"
               isBlog={false}
               title={<Trans>projects.chatdoc.title</Trans>}
               description={<Trans>projects.chatdoc.body</Trans>}
