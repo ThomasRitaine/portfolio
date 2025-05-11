@@ -1,17 +1,18 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { DiJavascript1, DiPython } from "react-icons/di";
+import { DiPython } from "react-icons/di";
 import {
   SiGithubactions,
   SiGit,
   SiTypescript,
   SiKubernetes,
-  SiTorproject,
   SiSupabase,
-  SiPrisma,
   SiAmazons3,
   SiPostgresql,
   SiTraefikproxy,
+  SiHelm,
+  SiAmazonwebservices,
+  SiJsonwebtokens,
 } from "react-icons/si";
 import { FaDocker, FaNode } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
@@ -21,9 +22,6 @@ function Techstack() {
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <SiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiTypescript />
@@ -41,7 +39,16 @@ function Techstack() {
         <SiKubernetes />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiHelm />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJsonwebtokens />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiTraefikproxy />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazonwebservices />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiAmazons3 />
@@ -57,12 +64,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPrisma />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTorproject />
       </Col>
     </Row>
   );
