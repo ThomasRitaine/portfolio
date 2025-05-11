@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import {
   SiLinux,
   SiNixos,
@@ -8,28 +8,17 @@ import {
   SiTorproject,
   SiNeovim,
 } from "react-icons/si";
+import Card from "./Card";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiLinux />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNixos />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNeovim />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGithub />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiBitwarden />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTorproject />
-      </Col>
+      <Card icon={<SiLinux />} transKey="about.tools.linux" />
+      <Card icon={<SiNixos />} transKey="about.tools.nixos" />
+      <Card icon={<SiNeovim />} transKey="about.tools.neovim" />
+      <Card icon={<SiGithub />} transKey="about.tools.github" />
+      <Card icon={<SiBitwarden />} transKey="about.tools.bitwarden" />
+      <Card icon={<SiTorproject />} transKey="about.tools.tor" />
     </Row>
   );
 }

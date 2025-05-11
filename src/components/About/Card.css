@@ -1,0 +1,145 @@
+.tech-card-container {
+  perspective: 1000px;
+  height: 160px;
+  width: 100%;
+  margin: 15px !important;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tech-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+  box-sizing: border-box;
+}
+
+.tech-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.tech-card.locked .tech-card-back::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.tech-card-front, 
+.tech-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 4.5em !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  border: 2px solid rgba(200, 137, 230, 0.637) !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  box-sizing: border-box;
+}
+
+.tech-card-front {
+  background-color: transparent;
+  z-index: 1;
+}
+
+.tech-card-back {
+  background-color: #2a1045;
+  transform: rotateY(180deg) translate3d(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  padding: 10px !important;
+}
+
+.tech-card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  transform-style: flat;
+  box-sizing: border-box;
+}
+
+.tech-card-back h3 {
+  font-size: 0.28em;
+  margin-bottom: 8px;
+  color: white;
+  font-weight: bold;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tech-card-back p {
+  font-size: 0.2em;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  padding: 0 5px;
+  line-height: 1.4;
+  max-height: 70%;
+  overflow: hidden;
+}
+
+/* Use the same exact border width and style for hover to prevent size change */
+.tech-card-container:hover .tech-card-front,
+.tech-card-container:hover .tech-card-back {
+  border: 2px solid rgba(197, 115, 230, 0.883) !important;
+  box-shadow: 0 0 15px rgba(140, 82, 255, 0.3) !important;
+}
+
+.tech-card.locked .tech-card-back {
+  box-shadow: 0 0 20px rgba(140, 82, 255, 0.5) !important;
+  border: 2px solid rgba(230, 115, 230, 0.9) !important;
+}
+
+@media (max-width: 767px) {
+  .tech-card-container {
+    height: 120px;
+  }
+  
+  .tech-card-back h3 {
+    font-size: 0.27em;
+  }
+  
+  .tech-card-back p {
+    font-size: 0.17em;
+  }
+  
+  .tech-card.locked .tech-card-back::after {
+    width: 6px;
+    height: 6px;
+    top: 6px;
+    right: 6px;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { DiPython } from "react-icons/di";
 import {
   SiGithubactions,
@@ -16,55 +16,26 @@ import {
 } from "react-icons/si";
 import { FaDocker, FaNode } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
+import Card from "./Card";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTypescript />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <FaNode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <FaDocker />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiKubernetes />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHelm />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiJsonwebtokens />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTraefikproxy />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAmazonwebservices />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAmazons3 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGithubactions />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSupabase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbSql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
+      <Card icon={<SiGit />} transKey="about.tech.git" />
+      <Card icon={<SiTypescript />} transKey="about.tech.typescript" />
+      <Card icon={<FaNode />} transKey="about.tech.node" />
+      <Card icon={<DiPython />} transKey="about.tech.python" />
+      <Card icon={<FaDocker />} transKey="about.tech.docker" />
+      <Card icon={<SiKubernetes />} transKey="about.tech.kubernetes" />
+      <Card icon={<SiHelm />} transKey="about.tech.helm" />
+      <Card icon={<SiJsonwebtokens />} transKey="about.tech.jwt" />
+      <Card icon={<SiTraefikproxy />} transKey="about.tech.traefik" />
+      <Card icon={<SiAmazonwebservices />} transKey="about.tech.aws" />
+      <Card icon={<SiAmazons3 />} transKey="about.tech.s3" />
+      <Card icon={<SiGithubactions />} transKey="about.tech.github_actions" />
+      <Card icon={<SiSupabase />} transKey="about.tech.supabase" />
+      <Card icon={<TbSql />} transKey="about.tech.sql" />
+      <Card icon={<SiPostgresql />} transKey="about.tech.postgresql" />
     </Row>
   );
 }
