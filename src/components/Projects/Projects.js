@@ -11,6 +11,7 @@ import etuuttApiSymfony from "../../Assets/Projects/etuutt-api-symfony.webp";
 import cdn from "../../Assets/Projects/cdn.webp";
 import nixos from "../../Assets/Projects/nixos.webp";
 import phoenix86 from "../../Assets/Projects/phoenix86.webp";
+import sso from "../../Assets/Projects/sso.webp";
 import labsaiarttv from "../../Assets/Projects/labsaiarttv.webp";
 import aiarttv from "../../Assets/Projects/aiarttv.webp";
 import qrcode from "../../Assets/Projects/qrcode.webp";
@@ -63,6 +64,17 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={sso}
+              isBlog={false}
+              title={<Trans>projects.sso.title</Trans>}
+              description={<Trans>projects.sso.body</Trans>}
+              ghLink="https://github.com/goauthentik/authentik"
+              demoLink="https://admin.qrcode.ai-art.tv"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={labsaiarttv}
               isBlog={false}
               title={<Trans>projects.labs-ai-art-tv.title</Trans>}
@@ -74,23 +86,23 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={qrcode}
-              isBlog={false}
-              title={<Trans>projects.qrcode.title</Trans>}
-              description={<Trans>projects.qrcode.body</Trans>}
-              ghLink="https://github.com/shlinkio/shlink"
-              demoLink="https://qrcode.ai-art.tv"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath={cdn}
               isBlog={false}
               title={<Trans>projects.cdn.title</Trans>}
               description={<Trans>projects.cdn.body</Trans>}
               ghLink="https://github.com/ThomasRitaine"
               demoLink="https://cdn.thomas.ritaine.com"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={qrcode}
+              isBlog={false}
+              title={<Trans>projects.qrcode.title</Trans>}
+              description={<Trans>projects.qrcode.body</Trans>}
+              ghLink="https://github.com/shlinkio/shlink"
+              demoLink="https://qrcode.ai-art.tv"
             />
           </Col>
 
