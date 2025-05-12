@@ -10,6 +10,7 @@ import terminal from "../../Assets/Projects/terminal.webp";
 import etuuttApiSymfony from "../../Assets/Projects/etuutt-api-symfony.webp";
 import cdn from "../../Assets/Projects/cdn.webp";
 import nixos from "../../Assets/Projects/nixos.webp";
+import phoenix86 from "../../Assets/Projects/phoenix86.webp";
 import labsaiarttv from "../../Assets/Projects/labsaiarttv.webp";
 import aiarttv from "../../Assets/Projects/aiarttv.webp";
 import qrcode from "../../Assets/Projects/qrcode.webp";
@@ -46,6 +47,17 @@ function Projects() {
               description={<Trans>projects.chatdoc.body</Trans>}
               ghLink="https://github.com/ThomasRitaine/chatdoc"
               demoLink="https://youtu.be/fZRO6ww6rFQ"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={phoenix86}
+              isBlog={false}
+              title={<Trans>projects.phoenix86.title</Trans>}
+              description={<Trans>projects.phoenix86.body</Trans>}
+              ghLink="https://github.com/ThomasRitaine/nixos-config"
+              demoLink="https://phoenix86-thomas.ritaine.com"
             />
           </Col>
 
