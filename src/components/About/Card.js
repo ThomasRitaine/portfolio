@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
 import { Col } from "react-bootstrap";
-import { useTranslation } from "react-i18next";
 import './Card.css';
 
-function Card({ icon, transKey }) {
+function Card({ icon, title, description }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isClickLocked, setIsClickLocked] = useState(false);
-  const { t } = useTranslation();
   const timeoutRef = useRef(null);
 
   const isFlipped = isClickLocked || isHovered;
@@ -48,7 +46,7 @@ function Card({ icon, transKey }) {
 
   return (
     <Col xs={4} md={2} className="tech-card-container">
-      <div 
+      <div
         className={`tech-card ${isFlipped ? "flipped" : ""} ${isClickLocked ? "locked" : ""}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -59,8 +57,8 @@ function Card({ icon, transKey }) {
         </div>
         <div className="tech-card-back">
           <div className="tech-card-content">
-            <h3>{t(`${transKey}.title`)}</h3>
-            <p>{t(`${transKey}.description`)}</p>
+            <h3>{title}</h3>
+            <p>{description}</p>
           </div>
         </div>
       </div>
