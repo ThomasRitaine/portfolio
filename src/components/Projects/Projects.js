@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import server from "../../Assets/Projects/server.webp";
 import pipeline from "../../Assets/Projects/ci-cd-pipeline.webp";
+import mailserver from "../../Assets/Projects/mailserver.webp";
 import portfolio from "../../Assets/Projects/portfolio.webp";
 import terminal from "../../Assets/Projects/terminal.webp";
 import etuuttApiSymfony from "../../Assets/Projects/etuutt-api-symfony.webp";
@@ -55,7 +56,7 @@ function Projects() {
               title={<Trans>projects.labs-ai-art-tv.title</Trans>}
               description={<Trans>projects.labs-ai-art-tv.body</Trans>}
               ghLink="https://github.com/ThomasRitaine/auto-midjourney"
-              demoLink="https://labs.ai-art.tv"
+              demoLink="https://labs.ai-art.tv/collection"
             />
           </Col>
 
@@ -65,6 +66,7 @@ function Projects() {
               isBlog={false}
               title={<Trans>projects.qrcode.title</Trans>}
               description={<Trans>projects.qrcode.body</Trans>}
+              ghLink="https://github.com/shlinkio/shlink"
               demoLink="https://qrcode.ai-art.tv"
             />
           </Col>
@@ -77,6 +79,17 @@ function Projects() {
               description={<Trans>projects.cdn.body</Trans>}
               ghLink="https://github.com/ThomasRitaine"
               demoLink="https://cdn.thomas.ritaine.com"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={mailserver}
+              isBlog={false}
+              title={<Trans>projects.mailserver.title</Trans>}
+              description={<Trans>projects.mailserver.body</Trans>}
+              ghLink="https://github.com/mail-in-a-box/mailinabox"
+              demoLink="https://mail.thomas.ritaine.com"
             />
           </Col>
 
