@@ -16,6 +16,7 @@ import labsaiarttv from "../../Assets/Projects/labsaiarttv.webp";
 import aiarttv from "../../Assets/Projects/aiarttv.webp";
 import qrcode from "../../Assets/Projects/qrcode.webp";
 import { Trans, withTranslation } from "react-i18next";
+import BottomNavigation from "../BottomNavigation";
 
 function Projects() {
   return (
@@ -189,6 +190,11 @@ function Projects() {
             />
           </Col>
         </Row>
+
+        <BottomNavigation
+          showProjects={false}
+        />
+
       </Container>
     </Container>
   );

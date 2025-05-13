@@ -6,6 +6,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.webp";
 import Toolstack from "./Toolstack";
+import BottomNavigation from "../BottomNavigation";
 import { Trans, withTranslation } from "react-i18next";
 
 function About() {
@@ -47,6 +48,9 @@ function About() {
         <Toolstack />
 
         <Github />
+
+        <BottomNavigation showAbout={false} />
+
       </Container>
     </Container>
   );

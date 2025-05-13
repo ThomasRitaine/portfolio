@@ -533,17 +533,14 @@ button:focus {
   color: #fff !important;
   background-color: #623686 !important;
   border-color: #623686 !important;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-primary:hover {
   color: #fff !important;
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
-}
-
-.home-content .btn-primary {
-  position: relative;
-  z-index: 1;
 }
 
 .btn:focus {

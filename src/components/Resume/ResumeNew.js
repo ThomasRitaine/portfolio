@@ -6,16 +6,16 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { Trans, useTranslation, withTranslation } from "react-i18next";
+import BottomNavigation from "../BottomNavigation";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const { i18n } = useTranslation('home');
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
-
-  const { i18n } = useTranslation('home');
 
   // URLs to CDN PDFs
   const resume_fr = "https://cdn.thomas.ritaine.com/CV_Thomas_Ritaine_fr.pdf";
@@ -54,6 +54,11 @@ function ResumeNew() {
             &nbsp;<Trans>resume.download</Trans>
           </Button>
         </Row>
+
+        <BottomNavigation
+          showResume={false}
+        />
+
       </Container>
     </div>
   );

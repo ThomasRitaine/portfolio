@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Trans, withTranslation } from "react-i18next";
+import BottomNavigation from "../BottomNavigation";
 
 function Home2() {
   function getAge(dateString) {
@@ -106,6 +107,11 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
+
+        <BottomNavigation
+          projectsText={<Trans>home.view_projects</Trans>}
+        />
+
         <Row>
           <Col md={12} className="home-about-social">
             <h1>
