@@ -484,6 +484,7 @@ button:focus {
   aspect-ratio: 16/9;
   border-radius: 10px;
   border: none;
+  margin-bottom: 10px;
 }
 
 .blog-card {
