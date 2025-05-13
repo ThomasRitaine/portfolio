@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import ecApiCatalogue from "../../Assets/Projects/ec-api-catalogue.webp";
 import server from "../../Assets/Projects/server.webp";
 import pipeline from "../../Assets/Projects/ci-cd-pipeline.webp";
 import mailserver from "../../Assets/Projects/mailserver.webp";
@@ -30,6 +31,16 @@ function Projects() {
           <Trans>projects.professional.body</Trans>
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ecApiCatalogue}
+              isBlog={false}
+              title={<Trans>projects.ecApiCatalogue.title</Trans>}
+              description={<Trans>projects.ecApiCatalogue.body</Trans>}
+              gitlabLink="https://code.europa.eu/api-gateway/api-catalogue-backend/-/tree/acc?ref_type=heads"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               videoId="fZRO6ww6rFQ"

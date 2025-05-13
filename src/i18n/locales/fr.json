@@ -83,6 +83,8 @@
   "about.tools.tor.title": "Tor",
   "about.tools.tor.description": "J'explore les technologies de confidentialité, ce portfolio fonctionne en hidden service",
   "projects.professional.title": "<b>Réalisations</b> professionnelles",
+  "projects.ecApiCatalogue.title": "EC API Catalogue - Backend",
+  "projects.ecApiCatalogue.body": "J'architecte et développe le backend du Catalogue d'API de la Commission Européenne, une plateforme unifiée qui agrège et surveille les API réutilisables depuis plusieurs passerelles. Construit avec Node.js et Express, le système inclut des imports automatisés quotidiens, une authentification JWT, une collecte complète de métriques, et fonctionne sur Kubernetes/EKS. La plateforme permet aux développeurs de découvrir, visualiser les définitions OpenAPI, et surveiller les métriques de performance à travers toutes les API de la Commission.",
   "projects.professional.body": "Voici mes principales contributions et réalisations professionnelles.",
   "projects.personal.title": "Projets <b>personnels</b>",
   "projects.personal.body": "Voici quelques projets personnels que j'ai développés et que je maintiens.",
