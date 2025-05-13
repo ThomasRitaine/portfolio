@@ -8,15 +8,14 @@ function ProjectCards(props) {
   return (
     <Card className="project-card-view">
       {props.videoId ? (
-          <iframe
-            className="project-iframe"
-            src={`https://www.youtube.com/embed/${props.videoId}`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+        <iframe
+          className="project-iframe"
+          src={`https://www.youtube.com/embed/${props.videoId}`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
       ) : (
         <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       )}
