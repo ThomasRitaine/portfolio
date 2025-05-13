@@ -11,14 +11,14 @@ function AboutCard() {
             <Trans>about.discover.body</Trans>
           </p>
           <ul>
-            <li className="emoji-li">
-              💪 <Trans>about.discover.body.ul.1</Trans>
+            <li>
+              <Trans>about.discover.body.ul.1</Trans>
             </li>
-            <li className="emoji-li">
-              🎶 <Trans>about.discover.body.ul.2</Trans>
+            <li>
+              <Trans>about.discover.body.ul.2</Trans>
             </li>
-            <li className="emoji-li">
-              🌏 <Trans>about.discover.body.ul.3</Trans>
+            <li>
+              <Trans>about.discover.body.ul.3</Trans>
             </li>
           </ul>
 
