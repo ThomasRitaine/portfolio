@@ -23,23 +23,12 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <Trans>projects.title</Trans>
+          <Trans>projects.professional.title</Trans>
         </h1>
         <p style={{ color: "white" }}>
-          <Trans>projects.body</Trans>
+          <Trans>projects.professional.body</Trans>
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={nixos}
-              isBlog={false}
-              title={<Trans>projects.nixos.title</Trans>}
-              description={<Trans>projects.nixos.body</Trans>}
-              ghLink="https://github.com/ThomasRitaine/nixos-config"
-              demoLink=""
-            />
-          </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
               videoId="fZRO6ww6rFQ"
@@ -48,6 +37,27 @@ function Projects() {
               description={<Trans>projects.chatdoc.body</Trans>}
               ghLink="https://github.com/ThomasRitaine/chatdoc"
               demoLink="https://youtu.be/fZRO6ww6rFQ"
+            />
+          </Col>
+
+        </Row>
+
+        <h1 className="project-heading">
+          <Trans>projects.personal.title</Trans>
+        </h1>
+        <p style={{ color: "white" }}>
+          <Trans>projects.personal.body</Trans>
+        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={nixos}
+              isBlog={false}
+              title={<Trans>projects.nixos.title</Trans>}
+              description={<Trans>projects.nixos.body</Trans>}
+              ghLink="https://github.com/ThomasRitaine/nixos-config"
+              demoLink=""
             />
           </Col>
 
