@@ -1,6 +1,6 @@
 {
-  "nav.about": "A propos",
-  "nav.about.path": "/a-propos",
+  "nav.about": "À propos de moi",
+  "nav.about.path": "/a-propos-de-moi",
   "nav.projects": "Projets",
   "nav.projects.path": "/projets",
   "nav.resume": "CV",

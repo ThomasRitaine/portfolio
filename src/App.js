@@ -38,11 +38,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projets" element={<Projects />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/a-propos" element={<About />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/a-propos-de-moi" element={<About />} />
+          <Route path="/about-me" element={<About />} />
           <Route path="/cv" element={<Resume />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </div>
