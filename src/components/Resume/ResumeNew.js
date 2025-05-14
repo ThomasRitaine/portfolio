@@ -18,6 +18,27 @@ function ResumeNew() {
 
   const resume_url = "https://cdn.thomas.ritaine.com/Thomas_Ritaine_Resume.pdf";
 
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(resume_url);
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Thomas_Ritaine_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Download failed:', error);
+      window.open(resume_url, '_blank');
+    }
+  };
+
   return (
     <div>
       <Container fluid className="resume-section">
@@ -25,9 +46,8 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={resume_url}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
+            onClick={handleDownload}
+            style={{ maxWidth: "250px", cursor: "pointer" }}
           >
             <AiOutlineDownload />
             &nbsp;<Trans>resume.download</Trans>
@@ -43,9 +63,8 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={resume_url}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
+            onClick={handleDownload}
+            style={{ maxWidth: "250px", cursor: "pointer" }}
           >
             <AiOutlineDownload />
             &nbsp;<Trans>resume.download</Trans>
